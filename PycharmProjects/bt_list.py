@@ -1,5 +1,7 @@
 # https://www.w3schools.com/python/python_lists.asp
 # Khai bao list
+import random
+
 my_list = ["Hello", 11, 22]
 
 # ===== Copy sang 1 bien moi va phan phat dia cho cung nho moi
@@ -38,7 +40,7 @@ print(mylist)
 
 # Join Two Lists
 print('---> Join Two Lists')
-list1 = ["a", "b" , "c"]
+list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 list3 = list1 + list2
 print(list3)
@@ -56,14 +58,28 @@ for e in l1:
         list3.append(e)
 print(list3)
 
+# ------------------
+print('---> ==============================')
+row = 6
+col = 6
+m = []
+for i in range(row):
+    mr = []
+    for j in range(col):
+        mr.append(random.randint(0, 20))
+    m.append(mr)
+print(*m, sep='\n')
 
-
-
-
-
-
-
-
+print('---> ==============================')
+for idx, it in enumerate(m):
+    if idx == 0:
+        print(' ' * 2, '[', it, ',')
+    elif idx == len(m) // 2:
+        print('l = ', it, ',')
+    elif idx == len(m) - 1:
+        print(' ' * 4, it, ']')
+    else:
+        print(' ' * 4, it, ',')
 
 
 
